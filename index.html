@@ -3,55 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAYANT TRÉSOR</title>
+    <title>Brayant - Étudiant Brillant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             margin: 0;
-            padding: 20px;
+            background-color: #edeff1;
+            color: #251a1f;
+        }
+        header {
+            background-color: #576eec;
             color: white;
+            padding: 20px;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
+        section {
+            padding: 20px;
             margin: 10px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0077cc;
+            color: white;
+           margin-top: 20px;
+        }
+        .btn-commander {
+            display: inline-block;
+            background: #FF4B4B;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+        .btn-lol {
+            display: inline-block;
+            background: #576eec;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .btn-commander:hover {
+            background: #E03E3E;
+            transform: scale(1.05);
+        }
+        .btn-lol:hover {
+            background: #4558d9;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>BRAYANT TRESOR</h1>
-            <p>Étudiant Brillant</p>
-            <p>Un étudiant très brillant et ambitieux</p>
-            <img src="moi.jpeg" alt="Photo de Brayant" style="width: 150px; height: 150px; border: 3px solid white; margin-top: 20px;">
-        </header>
-        
-        <section>
-            <h2>À propos de moi</h2>
-            <p>Je suis un étudiant passionné par la technologie et l'innovation.</p>
-            <a href="#competences" class="btn">Voir mes compétences</a>
-            <a href="#contact" class="btn">Me contacter</a>
-        </section>
+
+<header>
+    <h1>Bienvenue sur le site de Brayant</h1>
+    <p>Un étudiant très brillant et ambitieux</p>
+</header>
+
+<section>
+    <div class="card">
+        <h2>À propos de moi</h2>
+        <p>Je m'appelle Kenmogne feussi bryant trésor , un étudiant passionné par l'apprentissage et la réussite. 
+        Je me distingue par mon sérieux, ma créativité et ma détermination.</p>
     </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>Mes compétences</h2>
+        <ul>
+            <li>Travail acharné</li>
+            <li>Esprit analytique</li>
+            <li>Maîtrise de l'informatique</li>
+            <li>Résolution de problèmes</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <div class="card">
+        <h2>Mes objectifs</h2>
+        <p>Devenir un expert dans mon domaine, contribuer à des projets innovants et inspirer les autres étudiants.</p>
+    </div>
+</section>
+
+<section>
+    <div class="card" style="text-align: center; background: #262730; color: white;">
+        <h2>🪑 Meubles Bois Cameroun</h2>
+        <p>Artisanat de qualité à Douala. Livraison en 48h. Paiement sécurisé par Stripe.</p>
+        <p><strong>Tabouret 25,000 FCFA | Banc + Étagères 65,000 FCFA | Table Haute 85,000 FCFA</strong></p>
+        <a href="https://meubles-bois-cameroun.streamlit.app" target="_blank" class="btn-commander">
+            🛒 COMMANDER & PAYER EN LIGNE
+        </a>
+    </div>
+</section>
+
+<section>
+    <div class="card" style="text-align: center;">
+        <h2>🎮 Lol Machine V6</h2>
+        <p>Teste ma machine interactive. Projets tech by Brayant.</p>
+        <a href="https://brayanttresor9-eng-lol-machine-v6-code-cfngds.streamlit.app" target="_blank" class="btn-lol">
+            🔥 LANCER LOL MACHINE
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Brayant - Tous droits réservés</p>
+</footer>
+
 </body>
 </html>
