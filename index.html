@@ -1,143 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brayant - Étudiant Brillant</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #edeff1;
-            color: #251a1f;
-        }
-        header {
-            background-color: #576eec;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-        }
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #0077cc;
-            color: white;
-           margin-top: 20px;
-        }
-        .btn-commander {
-            display: inline-block;
-            background: #FF4B4B;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 15px;
-            margin-right: 10px;
-            transition: 0.3s;
-        }
-        .btn-lol {
-            display: inline-block;
-            background: #576eec;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-        .btn-commander:hover {
-            background: #E03E3E;
-            transform: scale(1.05);
-        }
-        .btn-lol:hover {
-            background: #4558d9;
-            transform: scale(1.05);
-        }
-        .photo-profil {
-            width: 150px;
-            height: 150px;
-            border: 4px solid white;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KENMOGNE FEUSSI BRYANT - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    
+    /* HEADER EN FLEXBOX */
+    header { 
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    
+    .header-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    h1 { font-size: 2.8em; margin-bottom: 10px; }
+    .subtitle { font-size: 1.3em; opacity: 0.9; }
+    
+    section { 
+      background: rgba(255, 255, 255, 0.1); 
+      padding: 30px; 
+      margin: 30px 0; 
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+    h2 { color: #fff; margin-bottom: 15px; border-bottom: 2px solid #fff; padding-bottom: 10px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { 
+      background: #fff; 
+      color: #667eea; 
+      padding: 8px 16px; 
+      border-radius: 20px; 
+      font-weight: bold;
+    }
+    footer { text-align: center; padding: 30px 0; opacity: 0.8; }
+    a { color: #fff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* NOUVEAU : Style pour les liens WhatsApp */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 5px 0;
+      padding: 6px 12px;
+      background: #25D366;
+      border-radius: 20px;
+      transition: transform 0.2s;
+    }
+    .contact-link:hover {
+      transform: scale(1.05);
+      text-decoration: none;
+      background: #20c15a;
+    }
+    
+    /* Responsive : sur téléphone, photo au dessus du texte */
+    @media (max-width: 700px) {
+      header { flex-direction: column; text-align: center; gap: 20px; }
+      h1 { font-size: 2.2em; }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <img src="moi.jpg" alt="Photo de KENMOGNE FEUSSI BRYANT" class="profile-pic">
+      <div class="header-text">
+        <h1>KENMOGNE FEUSSI BRYANT</h1>
+        <p class="subtitle">Étudiant IUT Douala | Développeur Web | Créatif</p>
+      </div>
+    </header>
 
-<header>
-    <h1>Bienvenue sur le site de Brayant</h1>
-    <p>Un étudiant très brillant et ambitieux</p>
-    <img src="moi.jpeg" alt="Photo de Brayant" class="photo-profil">
-</header>
+    <section>
+      <h2>À propos de moi</h2>
+      <p>
+        Salut ! Je suis Kenmogne Feussi Brayant, étudiant à l'IUT de Douala, passionné par le développement web et la création de projets qui ont du sens. 
+        J'aime apprendre, coder et transformer des idées en sites web concrets. 
+        Mon objectif : créer des solutions simples et efficaces pour les gens.
+      </p>
+    </section>
 
-<section>
-    <div class="card">
-        <h2>À propos de moi</h2>
-        <p>Je m'appelle Kenmogne feussi bryant trésor , un étudiant passionné par l'apprentissage et la réussite. 
-        Je me distingue par mon sérieux, ma créativité et ma détermination.</p>
-    </div>
-</section>
+    <section>
+      <h2>Mes Compétences</h2>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git & GitHub</span>
+      </div>
+    </section>
 
-<section>
-    <div class="card">
-        <h2>Mes compétences</h2>
-        <ul>
-            <li>Travail acharné</li>
-            <li>Esprit analytique</li>
-            <li>Maîtrise de l'informatique</li>
-            <li>Résolution de problèmes</li>
-        </ul>
-    </div>
-</section>
+    <section>
+      <h2>Mes Projets</h2>
+      <p>
+        - <strong>Camavinga Market</strong> : Site e-commerce de vente en ligne<br>
+        - <strong>Meubles Bois Cameroun</strong> : Vitrine pour artisanat local<br>
+        - <strong>LOL Machine V6</strong> : Projet personnel en cours
+      </p>
+    </section>
 
-<section>
-    <div class="card">
-        <h2>Mes objectifs</h2>
-        <p>Devenir un expert dans mon domaine, contribuer à des projets innovants et inspirer les autres étudiants.</p>
-    </div>
-</section>
-<section>
-    <h2>voici quelques de mes projets</h2>
-</section>
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Email : <a href="mailto:brayanttresor9@gmail.com">brayanttresor9@gmail.com</a><br><br>
+        
+        <a href="https://wa.me/237671558286" target="_blank" class="contact-link">
+          💬 WhatsApp : +237 671 55 82 86
+        </a><br>
+        
+        <a href="https://wa.me/237686488890" target="_blank" class="contact-link">
+          💬 WhatsApp : +237 686 48 88 90
+        </a><br><br>
+        
+        GitHub : <a href="https://github.com/brayanttresor9-eng">github.com/brayanttresor9-eng</a>
+      </p>
+    </section>
 
-<section>
-    <div class="card" style="text-align: center; background: #262730; color: white;">
-        <h2>🪑 Meubles Bois Cameroun</h2>
-        <p>Artisanat de qualité à Douala. Livraison en 48h. Paiement sécurisé par Stripe.</p>
-        <p><strong>Tabouret 25,000 FCFA | Banc + Étagères 65,000 FCFA | Table Haute 85,000 FCFA</strong></p>
-        <a href="https://meubles-bois-cameroun.streamlit.app" target="_blank" class="btn-commander">
-            🛒 COMMANDER & PAYER EN LIGNE
-        </a>
-    </div>
-</section>
-
-<section>
-    <div class="card" style="text-align: center;">
-        <h2>🎮 Lol Machine V6</h2>
-        <p>Teste ma machine interactive. Projets tech by Brayant.</p>
-        <a href="https://brayanttresor9-eng-lol-machine-v6-code-cfngds.streamlit.app" target="_blank" class="btn-lol">
-            🔥 LANCER LOL MACHINE
-        </a>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Brayant - Tous droits réservés</p>
-</footer>
-
+    <footer>
+      <p>© 2026 Kenmogne Brayant. Fait avec passion ☕</p>
+    </footer>
+  </div>
 </body>
 </html>
