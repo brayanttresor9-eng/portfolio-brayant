@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KENMOGNE FEUSSI BRYANT - Portfolio</title>
+  <link rel="icon" href="brayant.jpg">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
@@ -42,6 +43,28 @@
     h1 { font-size: 2.8em; margin-bottom: 10px; }
     .subtitle { font-size: 1.3em; opacity: 0.9; }
     
+    /* BOUTON CV */
+    .btn-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #fff;
+      color: #667eea;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 2px solid #fff;
+      text-decoration: none;
+    }
+
+    .btn-cv:hover {
+      background: transparent;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    
     section { 
       background: rgba(255, 255, 255, 0.1); 
       padding: 30px; 
@@ -62,7 +85,7 @@
     a { color: #fff; text-decoration: none; }
     a:hover { text-decoration: underline; }
     
-    /* NOUVEAU : Style pour les liens WhatsApp */
+    /* Style pour les liens WhatsApp */
     .contact-link {
       display: inline-flex;
       align-items: center;
@@ -79,7 +102,7 @@
       background: #20c15a;
     }
     
-    /* Responsive : sur téléphone, photo au dessus du texte */
+    /* Responsive */
     @media (max-width: 700px) {
       header { flex-direction: column; text-align: center; gap: 20px; }
       h1 { font-size: 2.2em; }
@@ -93,6 +116,16 @@
       <div class="header-text">
         <h1>KENMOGNE FEUSSI BRYANT</h1>
         <p class="subtitle">Étudiant IUT Douala | Développeur Web | Créatif</p>
+        
+        <!-- Bouton CV avec icône SVG -->
+        <a href="CV_Brayant.pdf" download class="btn-cv">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Télécharger mon CV
+        </a>
       </div>
     </header>
 
