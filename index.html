@@ -6,110 +6,99 @@
   <title>KENMOGNE FEUSSI BRYANT - Portfolio</title>
   <link rel="icon" href="brayant.jpg">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body { 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-attachment: fixed;
       color: #fff;
       line-height: 1.6;
     }
     .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
     
-    /* HEADER EN FLEXBOX */
+    nav{
+      position:sticky;top:0;background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);padding:15px 0;
+      border-bottom:1px solid rgba(255,255,255,0.2);z-index:10;text-align:center
+    }
+    nav a{margin:0 15px;color:#fff;font-weight:600;text-decoration:none;transition:0.3s}
+    nav a:hover{color:#ffe66d}
+    
     header { 
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 60px 0;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex;align-items: center;gap: 40px;
+      padding: 80px 0;flex-wrap: wrap;justify-content: center;
     }
     
     .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
+      width: 180px;height: 180px;border-radius: 50%;
+      object-fit: cover;border: 5px solid #fff;
       box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      flex-shrink: 0;
+      flex-shrink: 0;transition:0.4s
     }
+    .profile-pic:hover{transform:scale(1.08) rotate(3deg)}
     
-    .header-text {
-      flex: 1;
-      min-width: 250px;
-    }
-    
-    h1 { font-size: 2.8em; margin-bottom: 10px; }
+    .header-text {flex: 1;min-width: 250px;}
+    h1 { font-size: 2.8em; margin-bottom: 10px; text-shadow:0 2px 10px rgba(0,0,0,0.2); }
     .subtitle { font-size: 1.3em; opacity: 0.9; }
     
-    /* BOUTON CV */
     .btn-cv {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #fff;
-      color: #667eea;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-      border: 2px solid #fff;
-      text-decoration: none;
+      display: inline-flex;align-items: center;gap: 8px;margin-top: 20px;
+      padding: 12px 24px;background: #fff;color: #667eea;
+      border-radius: 30px;font-weight: bold;transition: 0.3s;
+      border: 2px solid #fff;text-decoration: none;
     }
-
     .btn-cv:hover {
-      background: transparent;
-      color: #fff;
-      transform: translateY(-2px);
+      background: transparent;color: #fff;transform: translateY(-3px);
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
     }
     
     section { 
       background: rgba(255, 255, 255, 0.1); 
-      padding: 30px; 
-      margin: 30px 0; 
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
+      padding: 35px; margin: 30px 0; border-radius: 15px;
+      backdrop-filter: blur(10px);border:1px solid rgba(255,255,255,0.2);
+      transition:0.3s
     }
-    h2 { color: #fff; margin-bottom: 15px; border-bottom: 2px solid #fff; padding-bottom: 10px; }
+    section:hover{transform:translateY(-5px)}
+    
+    h2 { color: #fff; margin-bottom: 15px; border-bottom: 2px solid #ffe66d; padding-bottom: 10px; }
     .skills { display: flex; flex-wrap: wrap; gap: 10px; }
     .skill { 
-      background: #fff; 
-      color: #667eea; 
-      padding: 8px 16px; 
-      border-radius: 20px; 
-      font-weight: bold;
+      background: #fff; color: #667eea; padding: 8px 16px; 
+      border-radius: 20px; font-weight: bold;transition:0.3s;cursor:default
     }
+    .skill:hover{transform:scale(1.1);background:#ffe66d}
+    
+    .project-card{margin:15px 0;padding:15px;background:rgba(255,255,255,0.05);border-radius:10px;border-left:3px solid #ffe66d}
+    
     footer { text-align: center; padding: 30px 0; opacity: 0.8; }
     a { color: #fff; text-decoration: none; }
     a:hover { text-decoration: underline; }
     
-    /* Style pour les liens WhatsApp */
     .contact-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 5px 0;
-      padding: 6px 12px;
-      background: #25D366;
-      border-radius: 20px;
+      display: inline-flex;align-items: center;gap: 8px;margin: 8px 0;
+      padding: 8px 16px;background: #25D366;border-radius: 25px;
       transition: transform 0.2s;
     }
     .contact-link:hover {
-      transform: scale(1.05);
-      text-decoration: none;
-      background: #20c15a;
+      transform: scale(1.05) translateY(-2px);
+      text-decoration: none;background: #20c15a;
     }
     
-    /* Responsive */
     @media (max-width: 700px) {
       header { flex-direction: column; text-align: center; gap: 20px; }
       h1 { font-size: 2.2em; }
+      nav a{margin:0 8px;font-size:0.9rem}
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#apropos">À Propos</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="container">
     <header>
       <img src="brayant.jpg" alt="Photo de KENMOGNE FEUSSI BRYANT" class="profile-pic">
@@ -117,7 +106,6 @@
         <h1>KENMOGNE FEUSSI BRYANT</h1>
         <p class="subtitle">Étudiant IUT Douala | Développeur Web | Créatif</p>
         
-        <!-- Bouton CV avec icône SVG -->
         <a href="CV_Brayant.pdf" download class="btn-cv">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -129,7 +117,7 @@
       </div>
     </header>
 
-    <section>
+    <section id="apropos">
       <h2>À propos de moi</h2>
       <p>
         Salut ! Je suis Kenmogne Feussi Brayant, étudiant à l'IUT de Douala en Génie Informatique, passionné par le développement web et la création de projets qui ont du sens. 
@@ -138,7 +126,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="competences">
       <h2>Mes Compétences</h2>
       <div class="skills">
         <span class="skill">HTML</span>
@@ -148,16 +136,20 @@
       </div>
     </section>
 
-    <section>
+    <section id="projets">
       <h2>Mes Projets</h2>
-      <p>
-        - <strong>Camavinga Market</strong> : Site e-commerce de vente en ligne<br>
-        - <strong>Meubles Bois Cameroun</strong> : Vitrine pour artisanat local<br>
-        - <strong>LOL Machine V6</strong> : Projet personnel en cours
-      </p>
+      <div class="project-card">
+        <strong>Camavinga Market</strong> : Site e-commerce de vente en ligne
+      </div>
+      <div class="project-card">
+        <strong>Meubles Bois Cameroun</strong> : Vitrine pour artisanat local
+      </div>
+      <div class="project-card">
+        <strong>LOL Machine V6</strong> : Projet personnel en cours
+      </div>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p>
         Email : <a href="mailto:brayanttresor9@gmail.com">brayanttresor9@gmail.com</a><br><br>
